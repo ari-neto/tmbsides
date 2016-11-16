@@ -7,11 +7,11 @@ machine:
 dependencies:
   override:
     - docker info
-    - docker build -t $CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME .
+    - docker build -t arineto/$CIRCLE_PROJECT_REPONAME .
 
 test:
   override:
-    - docker run -d -p 80:8000 $CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME; sleep 10
+    - docker run -d -p 80:8000 arineto/$CIRCLE_PROJECT_REPONAME; sleep 10
     - curl --retry 10 --retry-delay 5 -v http://localhost
 
 deployment:
@@ -19,4 +19,4 @@ deployment:
     tag: master
     commands:
       - docker info
-      - docker push $CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME
+      - docker push arineto/$CIRCLE_PROJECT_REPONAME
