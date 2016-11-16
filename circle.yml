@@ -16,7 +16,7 @@ test:
 
 deployment:
   production:
-    tag: master
+    branch: master
     commands:
       - docker info
       - docker push arineto/$CIRCLE_PROJECT_REPONAME
