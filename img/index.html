@@ -1,0 +1,558 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="description" content="BSides Presentation - November 2016">
+		<meta name="author" content="Ari Neto">
+		<meta name="author" content="Joelson Soares">
+		<title>from hell to Heaven (and the other way round too)</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<!-- <body> -->
+	<body style="transition: -webkit-transform 0.8s ease;">
+		<!-- <div class="reveal"> -->
+		<div class="reveal convex center" role="application" data-transition-speed="default" data-background-transition="fade">
+			<div class="slides">
+				<section>
+					<h1>From hell to Heaven (and the other way round too)</h1>
+					<h3>Trend Micro - BSides 2016</h3>
+					<p>
+						Joelson Soares - https://www.linkedin.com/in/joelson</a> / <a href="mailto:joelson_soares@trendmicro.com">joelson_soares@trendmicro.com</a>
+					</p>
+					<p>
+						Ari Neto - https://br.linkedin.com/in/arineto / <a href="mailto:ari_neto@trendmicro.com">ari_neto@trendmicro.com</a>
+					</p>
+					<p>
+						<small>Using reveal.js - Created by <a href="http://hakim.se">Hakim El Hattab</a> / <a href="http://twitter.com/hakimel">@hakimel</a></small>
+					</p>
+					<aside class="notes">
+                  <p>- Abertura</p>
+                  <p>- Joelson</p>
+                  <p>- Ari</p>
+               </aside>
+				</section>
+				<section>
+					<h2>Quem somos nós?</h2>
+					<p>
+						<img src="img/joelson.jpg" alt="Joelson" style="float:left">
+						Joelson Soares - Com experiência em tecnologias de infraestrutura, redes, serviços, gerenciamento e segurança.
+					</p>
+					<p>
+						<img src="img/ari.jpg" alt="Joelson" style="float:left">
+						Ari Neto - Com experiência em infraestrutura, virtualização, redes, armazenamento, nuvem, automação.
+					</p>
+				</section>
+				<section data-background="img/in_the_beginning.jpg" data-background-transition="zoom">
+					<h1>No começo...</h1>
+				</section>
+				<section data-background="img/datacenter.jpg" data-background-transition="fade" id="fragments">
+					<h2>Infraestrutura:</h2>
+					<ul>
+						<li>Muitas coisas para olhar:</li>
+						<li class="fragment fade-up">Compute (CPU/Memory/NET_IO/Disk_IO)</li>
+						<li class="fragment fade-up">Network (Switches, Routers, Load Balancers)</li>
+						<li class="fragment fade-up">Network Security (Firewalls, IPS, IDS, Proxies, VPN Concentrators)</li>
+						<li class="fragment fade-up">Storage (Disk, Block, Tape)</li>
+						<li class="fragment fade-up">Racks, Cabling, HVAC - Heating, ventilation and air conditioning</li>
+						<!-- <p>Highlight <span class="fragment highlight-red">red</span> <span class="fragment highlight-blue">blue</span> <span class="fragment highlight-green">green</span></p> -->
+					</ul>
+					<p class="fragment current-visible">...distraindo da necessidade das áreas de negócio...</p>
+				</section>
+				<section>
+					<h3>Meu Perímetro...</h3>
+					<img src="img/perimeter.jpg" alt="Perimeter" style="float:right;width:304px;height:228px;">
+					<p>
+						<ul>
+							<li>Firewall FrontEnd</li>
+							<li>IPS de Rede</li>
+							<li>Detecção de APT</li>
+							<li>Antispam</li>
+							<li>Controle de Navegação</li>
+							<li>Antimalware</li>
+							<li>Concentrador de VPN</li>
+							<li>Load Balance</li>
+							<li>VLANs: Web / App / Data</li>
+							<li>IPS de Host</li>
+							<li>Firewall BackEnd</li>
+							<li>Hardening de SO/APP</li>
+					</p>
+				</section>
+				<section data-background="img/solar-system.jpg" data-background="zoom">
+					<h3>Cada empresa tem o seu próprio ciclo:</h3>
+					<ul>
+						<li>Lifecycle: Refresh Software/Hardware</li>
+						<li>Como manter o sofware e hardware atualizados</li>
+						<li>Como usar novas tecnologias</li>
+						<li>Decidir o que vc vai gerenciar e o que vc vai ser terceirizado...</li>
+					</ul>
+					<p class="fragment current-visible">...ciclos longos geralmente...</p>
+				</section>
+				<section data-background="img/it_management.png" data-background="zoom">
+					<h3>Demora, muitos detalhes técnicos... Muito complicado para comunicar para as áreas usuárias:</h3>
+					<ul>
+						<li class="fragment fade-up">Planejamento: Definindo a arquitetura</li>
+						<li class="fragment fade-up">Planejamento: Transformando os requerimentos de arquitetura em tecnologia e serviços</li>
+						<li class="fragment fade-up">Compras: Hardware, Software e Serviços</li>
+						<li class="fragment fade-up">Implantação:</li>
+							<ul class="fragment fade-up">
+								<small>
+									<li>Datacenter: Espaço físico, Cabling, HVAC</li>
+									<li>Setup: SO, patches, mangament/monitoring/antimalware agents configuration</li>
+									<li>Gerenciamento: hostname, ip address, firewall rules, monitoring template, antimalware customization</li>
+									<li>Securança: security baseline, vulnerability assessment, event forwarding</li>
+									<li>Backup: backup survey and deployment</li>
+									<li>Applicação: application deployment, dev/qa/prod environments, monitoring, batch scheduling</li>
+									<li>Transição para produção: RFCs/GMUDs, CMDB, management spreadsheets...</li>
+									<li>Go live!!!</li>
+								</small>
+							</ul>
+						<p class="fragment current-visible">...Ufa!!!...</p>
+				</section>
+				<section>
+					<h3>My Precious Infrastructure</h3>
+					<p>
+						<img src="img/my_precious_infrastructure.jpg" alt="My Precious Infrastructure" style="width:800px;height:500px;">
+					</p>
+				</section>
+				<section data-background="img/i-am-waiting.jpg" data-background="zoom">
+					<h3>Ponto de vista dos nossos clientes:</h3>
+					<ul>
+						<li class="fragment fade-up">Dificuldade de entender a linguagem de TI</li>
+						<li class="fragment fade-up">Muitos processos para seguir</li>
+						<li class="fragment fade-up">Muitas razòes para "não fazer" doque "como podemos fazer isso funcionar"</li>
+						<li class="fragment fade-up">Difícil de ver TI como um parceiro ou um provedor de serivços</li>
+						<li class="fragment fade-up">TI esta muito preocupada com sua visão de tecnologia e indicadores do que entregar tecnologia para novas oportunidades de negócio</li>
+					</ul>
+						<p class="fragment current-visible">...muito devagar...</p>
+				</section>
+				<section>
+					<h2>Leaving Hell</h2>
+					<p>
+						É muito difícil manter a infraestrutura.
+						<ul>
+							<li>Manter segurança no perímetro</li>
+							<li>Manter ambiente atualizado</li>
+							<li>Replicar configurações</li>
+							<li>Gestão de capacidade</li>
+							<li>Auditar alterações</li>
+							<li>Controle de acesso</li>
+							<li>Manter ambiente documentado</li>
+							<li>Deployment e reconfigurações de padrões</li>
+					</p>
+				</section>
+				<section>
+					<h2>Medo de reboot</h2>
+					<p>
+						<img src="img/fear_of_rebooting.png" alt="Medo de Reboot" style="float:center;width:700px;height:500px;">
+						<a href="http://everythingsysadmin.com/2012/03/fear-of-rebooting.html"><small>http://everythingsysadmin.com/2012/03/fear-of-rebooting.html</small></a>
+					</p>
+				</section>
+				<section>
+					<h2>Se tivesse todos os patches aplicados não teria sido infectado</h2>
+					<p>
+						<img src="img/que_puxa.jpg" alt="Que Puxa" style="float:center;width:600px;height:400px;">
+					</p>
+				</section>
+				<section>
+					<h2>Solução... ir para a nuvem? Que nuvem?</h2>
+					<p>
+						<img src="img/que-nuvem.jpg" alt="Minha Nuvem" style="width:500px;height:500px;">
+					</p>
+				</section>
+				<section>
+					<h3>Minha Nuvem?</h3>
+					<p>
+						<img src="img/chaves_zas.jpg" alt="Minha Nuvem" style="width:500px;height:500px;">
+					</p>
+				</section>
+				<section data-background="img/chaves_zas.jpg" data-background-transition="zoom" data-background-size="contain">
+					<h3 class="fragment fade-up">Minha Nuvem?</h3>
+					<p class="fragment fade-up">
+						Tecnologias:
+						<ul class="fragment fade-up">
+							<li>IaaS: Openstack, CloudStack</li>
+							<li>Hypervisor: KVM, XenServer, ESXi, HyperV</li>
+							<li>Network: SDN, NFV...</li>
+							<li>Storage: SDS, Object, File, Block</li>
+							<li>E muito mais...</li>
+						</ul>
+					</p>
+				</section>
+				<section>
+					<h2>Going to heaven</h2>
+					<p>
+						É simples ir para nuvem? É só subir?
+					</p>
+				</section>
+				<section>
+					<h3>Pets vs Cattle...</h3>
+					<img src="img/servers_pets_or_cattle.jpg" alt="Pets_Cattle" style="width:800px;height:500px;">
+					<p>
+						<small>
+							Imagem: <a href:"http://www.theregister.co.uk/2013/03/18/servers_pets_or_cattle_cern/"> The Register - Are your servers PETS or CATTLE?</a>
+						</small>
+					</p>
+				</section>
+				<section>
+					<h3>Então...</h3>
+					<img src="img/hotel.png" alt="Perimeter" style="float:right;width:230px;height:150px;">
+					<p>
+						<ul>
+							<li>Shared Responsibility:</li>
+								<ul>
+									<small>
+										<li>Controles Diferentes no Perímetro</li>
+										<li>Desapego: Tchau equipamentos Físicos!</li>
+										<li>VLANs? Tchau VLANs!!</li>
+								</small>
+								</ul>
+							<li>Pensar Distribuído:</li>
+								<ul>
+									<small>
+										<li>Infraestrutura como um <b><i><font color="orange">Pool de Recursos</font></i></b></li>
+										<li>Alocação oportunística (<b><i><font color="orange">on demand</font></i></b>) de Recursos Computacionais</li>
+										<li>Serviços Disponíveis pela <b><i><font color="orange">rede em alta velocidade</font></i></b></li>
+									</small>
+								</ul>
+							<li>Pegue do <b><i><font color="orange">catálogo de serviços</font></i></b>:</li>
+								<ul>
+									<small>
+										<li>Concentrador de VPN</li>
+										<li>Load Balance</li>
+										<li>Imagem de SO</li>
+									</small>
+								</ul>
+					</p>
+				</section>
+				<section>
+					<h3>Security Concerns - 2016</h3>
+					<ul>
+						<li>CSA - Cloud Securtiy Alliance</li>
+						<ol type="1">
+								<li>Data Breaches</li>
+								<li>Weak Identity, Credential and Access Management</li>
+								<li>Insecure APIs</li>
+								<li>System and Application Vulnerabilities</li>
+								<li>Account Hijacking</li>
+								<li>Malicious Insiders</li>
+								<li>Advanced Persistent Threats (APTs)</li>
+								<li>Data Loss</li>
+								<li>Insufficient Due Diligence</li>
+								<li>Abuse and Nefarious Use of Cloud Services</li>
+								<li>Denial of Service</li>
+								<li>Shared Technology Issues</li>
+						</ol>
+						<small>
+							Source: <a href="https://cloudsecurityalliance.org/download/the-treacherous-twelve-cloud-computing-top-threats-in-2016/">https://cloudsecurityalliance.org/download/the-treacherous-twelve-cloud-computing-top-threats-in-2016/</a>
+						</small>
+					</ul>
+				</section>
+				<section data-background="img/hotel.png" data-background-transition="zoom" data-background-size="contain">
+						<h1>Pague pelo Uso! Como um Hotel...?</h3>
+							<ul class="fragment fade-up">
+									<li class="fragment fade-up">por hora/min</li>
+									<li class="fragment fade-up">Pay as you go</li>
+									<li class="fragment fade-up">Reservas</li>
+									<li class="fragment fade-up">Leilão</li>
+							</ul>
+					</p>
+				</section>
+				<section>
+					<h3>Respondendo à demanda...</h3>
+					<p>
+						<ul>
+							<li>Autoscaling - Metric Load Alarms:
+								<ul>
+									<li>CPU</li>
+									<li>Network</li>
+									<li>IO</li>
+									<li>Queue</li>
+									<li>Custom metric</li>
+								</ul>
+				</section>
+				<section data-background="img/resiliency.jpg" data-background-transition="zoom">
+				</section>
+				<section >
+					<h3>Selfhealing - Detectando falhas e corrigindo</h3>
+					<ul>
+						<li>Service Port</li>
+						<li>Health Status URL</li>
+						<li>Application Cache Layers</li>
+						<li>Persisting data</li>
+							<ul>
+								<li>Snapshot</li>
+								<li>Object Storage</li>
+							</ul>
+					</ul>
+				</section>
+				<section data-background="img/money-meme.jpg" data-transition="zoom" data-background-size="1100px">
+				</section>
+				<section data-background="img/gate_control.jpg" data-background-transition="zoom" data-backgorund-size="contain">
+					<h2>Inviabilidade de Concentrar o Tráfego em um Portão</h2>
+					<p>
+						<a href:"http://www.dailymail.co.uk/news/article-3442101/Mesmerising-drone-footage-shows-hundreds-sheep-moving-like-starlings-herded-fields.html">Mail OnLine</a>
+					</p>
+				</section>
+				<section data-background="img/airport_gates.jpg" data-background-transition="zoom" data-backgorund-size="contain">
+					<h1>Múltiplos Portões</h1>
+				</section>
+				<section>
+					<h3>Se o ambiente escala sozinho, como eu sei que esta consistente?</h3>
+					<img src="img/smith_matrix.jpg" alt="Smith Matrix" style="width:800px;height:500px;">
+				</section>
+				<section>
+					<h3>O Arquiteto ajuda?</h3>
+					<img src="img/architect_matrix.jpg" alt="Architect Matrix" style="width:800px;height:500px;">
+				</section>
+				<section data-background="img/chef-puppet-ansible-blog-image.png" data-background-transition="fade" data-backgorund-size="contain">
+					<h1>Configuration Managers</h1>
+					<!-- <img src="img/chef-puppet-ansible-blog-image.png" alt="Coniguration Managers" style="width:800px;height:500px;"> -->
+					<p>
+						<small>
+							Imagem: <a href:"https://blog.logentries.com/2014/09/log-analysis-takes-automated-orchestration-further/">Log Analysis Takes Automated Orchestration Further</a>
+						</small>
+					</p>
+				</section>
+				<section>
+					<h3>Configuration Managers</h3>
+					<p>
+						Eles ajudam com várias coisas:
+						<ul>
+							<li>Definem a configuração em arquivo (que pode ser versionado)</li>
+							<li>Garantem que o ambiente sempre estará em um estado pré-definido (idempotência)</li>
+								<ul>
+									<small>
+										<li>Versão de Softawre</li>
+										<li>Tunnings de SO: sysctl, ulimit, selinux, permissões..</li>
+									</small>
+								</ul>
+							<li>Garantem a consistência de configuração em um ambiente distribuído</li>
+							<li>Criam abstrações para acionamento do IaaS e do SO</li>
+							<li>Dependendo de como você usar, adeus SSH!!</li>
+							<li>Evite automatizar problemas!!!</li>
+					</p>
+				</section>
+				<section data-background="img/get-over-here.jpg" data-background-transition="fade" data-backgorund-size="contain">
+						<h3>Trazendo para o estado desejado</h3>
+							<p>
+								<ul>
+									<li><b><font color="orange">Puppet:</font></b><i> "If it finds any resources that are not in their <strong><font color="dark red">desired state</font></strong>, it makes any changes necessary to correct them."</i> <a href="https://docs.puppet.com/puppet/latest/reference/architecture.html"><br><small>https://docs.puppet.com/puppet/latest/reference/architecture.html</small></a></li>
+									<li><b><font color="orange">Ansible:</font></b><i> "Ansible features an state-driven resource model that describes the <strong><font color="dark red">desired state</font></strong> of computer systems and services, not the paths to get them to this state."</i><br><small><a href="https://www.ansible.com/configuration-management">https://www.ansible.com/configuration-management</small></a></li>
+									<li><b><font color="orange">Chef:</font></b><i> "...uses a “convergent” model of configuration. As changes propagate through the nodes, the network as a whole converges to the <strong><font color="darkgreen">desired configuration state</font></strong>."</i><br><small><a href="https://www.chef.io/solutions/infrastructure-automation/">https://www.chef.io/solutions/infrastructure-automation/</small></a></li>
+								</ul>
+							</p>
+				</section>
+				<section>
+					<h3>Infrastructure as Code</h3>
+					<p>
+						<img src="img/infra_as_code.png" alt="Infrastructure as Code" style="float:center;width:700px;height:550px;">
+					</p>
+				</section>
+				<section>
+					<h3>Infrastructure as Code - CI/CD</h3>
+					<pre><code data-trim data-noescape>
+machine:
+  services:
+    - docker
+  environment:
+    AWS_DEFAULT_REGION: us-east-1
+  pre:
+    - sudo pip install setuptools
+    - sudo pip install ansible==2.1.1.0 boto==2.42.0 awscli==1.10.22
+    - ansible --version
+    - pip freeze
+
+dependencies:
+  override:
+    - docker info
+    - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
+    - docker build -t tmbsides .
+
+test:
+  override:
+    - docker run -d -p 80:8000 dois; sleep 10
+    - curl --retry 10 --retry-delay 5 -v http://localhost
+
+deployment:
+  production:
+    branch: master
+    commands:
+      - docker tag dois arineto/tmbsides
+      - docker push arineto/tmbsides:$CIRCLE_TAG
+      - docker push arineto/tmbsides
+			- export ENV=prd ; cd ~/tmbsides/ansible/app-env ; ansible-playbook playbook.yml -vvvv
+  staging:
+    branch: staging
+    commands:
+      - docker tag dois arineto/tmbsides:$CIRCLE_BRANCH
+      - docker push arineto/tmbsides:$CIRCLE_BRANCH
+  feature:
+    branch: /feature-.*/
+    commands:
+      - echo $CIRCLE_BRANCH
+      - docker tag dois arineto/tmbsides:$CIRCLE_BRANCH
+      - docker push arineto/tmbsides:$CIRCLE_BRANCH
+      - export ENV=prd ; cd ~/tmbsides/ansible/app-env ; ansible-playbook playbook.yml -vvvv
+					</pre></code>
+				</section>
+				<section>
+					<h3>ACLs</h3>
+					<p>
+						<img src="img/security_group_acl.png" alt="SG ACLs" style="float:center;width:500px;height:550px;">
+					</p>
+				</section>
+				<section>
+					<h3>Blz... Mas se as instâncias nascem e morrem, o que significa gerenciar a configuração?</h3>
+					<img src="img/aws-autoscaling.png" alt="Autocaling" style="float:right;width:100px;height:200px;">
+					<p>
+						<ul>
+							<li>A que nasceu:</li>
+								<ul>
+									<small>
+										<li>A instância entrou no gerenciamento/CMDB?</li>
+										<li>Ela entrou na monitoração?</li>
+										<li>Putz... Cadastraram na Planilha?</li>
+									</small>
+								</ul>
+							<li>A que morreu:</li>
+								<ul>
+									<small>
+										<li>Como eu garanto que a configuração estava consistente?</li>
+										<li>E os eventos de segurança?</li>
+										<li>E os eventos da aplicação?</li>
+										<li>Xii, tá gerando um monte de eventos na monitoração...</li>
+									</small>
+								</ul>
+							<p>
+								<small>
+									Imagem: <a href:"http://dev.mlsdigital.net/posts/Cloud-Native-Drupal/">Multiple Region Autoscaling Drupal in Amazon Web Services</a>
+								</small>
+							</p>
+					</p>
+				</section>
+				<section>
+					<h3>Pensei que era mais fácil...</h3>
+					<img src="img/concerns.jpg" alt="Concerns Cloud" style="width:800px;height:500px;">
+					<p>
+						<small>
+							Imagem: <a href:"https://www.universalclass.com/articles/computers/reducing-your-vulnerability-to-computer-virus-attacks.htm">Reducing Your Vulnerability to Computer Virus Attacks</a>
+						</small>
+					</p>
+				</section>
+				<section>
+					<h3>Persistindo Eventos</h3>
+					<img src="img/elk.png" alt="ELK" style="width:400px;height:150px;">
+					<img src="img/graylog.jpg" alt="Graylog" style="width:400px;height:150px;">
+					</p>
+				</section>
+				<section>
+					<h3>Mas tem uma coisa que era difícil de fazer e agora é bem mais fácil...</h3>
+					<img src="img/it_is_possible.jpg" alt="Concerns Cloud" style="width:800px;height:500px;">
+				</section>
+				<section>
+					<h1>E a segurança?</h1>
+				</section>
+				<section>
+					<h3>Segmentação...</h3>
+					<p>
+						É possível fazer leverage de várias funcionalidades de segmentação:
+						<ul>
+							<li>Policies, Roles</li>
+							<li>Filtragem de Tráfego entre Subnets</li>
+							<li>Controle granular do esquema de roteamento</li>
+							<li>Security Groups</li>
+							<ul>
+								<small>
+									<li>SG_A de serviço: permite porta 443/TCP para 0.0.0.0/0</li>
+									<li>SG_B Web Tier: permite acesso na porta 80/TCP somente do SG_A</li>
+									<li>SB_C App Tier: permite acesso na porta 8080/TCP somente do SG_B</li>
+									<li>SB_D DB  Tier: permite acesso na porta 3306/TCP somente do SG_C</li>
+								</small>
+							</ul>
+							<p>
+								E também você sempre esta a um passo de publicar algo interno para o mundo... Atenção!
+							</p>
+						</p>
+				</section>
+				<section>
+					<h3>Facing the devil...</h3>
+					<p>
+						Escalabilidade e fácil provisionamento tem outro lado... Impacto de Custo!
+						<ul>
+							<ul>
+								<li>Carga:</li>
+									<ul>
+										<small>
+											<li>Crawling</li>
+											<li>DoS - Ataque de indiponibilidade DoS</li>
+											<li>Looping de Aplicação</li>
+										</small>
+									</ul>
+									<li>Acesso Local a uma instÃ¢ncia:</li>
+										<ul>
+											<small>
+												<li>Roles associadas em uma instÃ¢ncia</li>
+												<li>Acessos facilitados por SGs genÃ©ricos e roteamento irrestrito</li>
+												<li>Tráfego de Outbound</li>
+											</small>
+										</ul>
+									<li>Credenciais:</li>
+										<ul>
+											<small>
+												<li>Vazamento de credenciais com acesso de provisionamento (repos pÃºblicos no github)</li>
+												<li>TrÃ¡fego de Outbound</li>
+											</small>
+										</ul>
+								</ul>
+							</ul>
+						</p>
+				</section>
+				<section>
+					<h3>Quem controla as chaves? De quem são os dados?</h3>
+					<img src="img/mi_casa_es_su_casa.jpg" alt="Mi Casa Es Su Casa" style="width:800px;height:400px;">
+					<p>
+						<small>
+							Imagem: <a href:"https://www.skillshare.com/classes/design/Hand-Lettering-for-Chalk-Murals/1930585582/projects/47558?utm_campaign=project-share-1930585582-47558&utm_source=Facebook&utm_medium=project-share">Silkshare</a>
+						</small>
+					</p>
+				</section>
+				<section>
+					<h1><b>Obrigado!!!</b></h1>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>

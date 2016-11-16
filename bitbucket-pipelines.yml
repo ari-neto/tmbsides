@@ -1,0 +1,25 @@
+# This is a sample build configuration for other languages.
+# Check our guides at https://confluence.atlassian.com/x/VYk8Lw for more examples.
+# Only use spaces to indent your .yml configuration.
+# -----
+# You can specify a custom docker image from Docker Hub as your build environment.
+# image: atlassian/default-image
+
+pipelines:
+  default:
+    - step:
+        script:
+          # - ssh -Tv git@bitbucket.org
+          # - git clone ssh://git@bitbucket.org/ari_neto/tmbsides-2016
+          # - docker run 18fgsa/html-proofer tmbsides-2016/index.html
+          - echo "Everything is awesome!"
+  # branches:
+  #   master:
+  #     - step:
+  #         script:
+  #           - echo "This script runs only on commit to the master branch."
+  #   v1./*:
+  #     - step:
+  #         image: java:openjdk-9 # This step uses its own image
+  #         script:
+  #           - echo "This script runs only on commit to branches with names that match the feature/* pattern.
