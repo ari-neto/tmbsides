@@ -1,6 +1,6 @@
-# **BSides - 2016 - Presentation ** #
+# ** BSides - 2016 - Presentation ** #
 
-# **Conteúdo:** #
+# * Conteúdo: * #
 
 * Quem somos nós?
 * Desafio da Infrastrucutra Tradicional
