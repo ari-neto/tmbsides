@@ -65,15 +65,15 @@
 					<ul>
 						<li>Muitas coisas para olhar:</li>
 						<ul>
-							<li class="fragment fade-up">Compute (CPU/Memory/NET_IO/Disk_IO)</li>
-							<li class="fragment fade-up">Network (Switches, Routers, Load Balancers)</li>
-							<li class="fragment fade-up">Network Security (Firewalls, IPS, IDS, Proxies, VPN Concentrators)</li>
-							<li class="fragment fade-up">Storage (Disk, Block, Tape)</li>
-							<li class="fragment fade-up">Racks, Cabling, HVAC - Heating, ventilation and air conditioning</li>
+							<li class="fragment fade-up"><strong><font color="darkorange">Compute</font></strong> (CPU/Mem/IO-NET/Disk)</li>
+							<li class="fragment fade-up"><strong><font color="darkorange">Network</font></strong> (Switches, Routers, Load Balancers)</li>
+							<li class="fragment fade-up"><strong><font color="darkorange">Network Security</font></strong> (Firewalls, IPS, IDS, Proxies, VPN Concentrators)</li>
+							<li class="fragment fade-up"><strong><font color="darkorange">Storage</font></strong> (Disk/Block, File, Tape, Object)</li>
+							<li class="fragment fade-up"><strong><font color="darkorange">Datacenter</font></strong> (Racks, Cabling, HVAC - Heating, ventilation and air conditioning)</li>
 							<!-- <p>Highlight <span class="fragment highlight-red">red</span> <span class="fragment highlight-blue">blue</span> <span class="fragment highlight-green">green</span></p> -->
 						</ul>
 					</ul>
-					<p class="fragment current-visible">...distanciando das necessidades da área de negócio...</p>
+					<p class="fragment current-visible"><strong><font color="yellow">...distanciando das necessidades da área de negócio...</font></strong></p>
 				</section>
 				<section <section data-background="img/perimeter.jpg" data-background="zoom" data-background-size="cover">
 					<h3>Meu Perímetro...</h3>
@@ -102,15 +102,18 @@
 						<li>Como usar novas tecnologias</li>
 						<li>Decidir o que vc vai gerenciar e o que vc vai ser terceirizado...</li>
 					</ul>
-					<p class="fragment current-visible">...ciclos longos geralmente...</p>
+					<p class="fragment current-visible"><strong><font color="yellow">...ciclos longos geralmente...</font></strong></p>
 					<br><br>
 					<img src="img/ouroboros.png" alt="ouroboros" style="float:center;width:300px;height:200px;border:0">
 				</section>
 				<section data-background="img/it_management.png" data-background="zoom" data-background-size="cover">
 					<h3>Demora, muitos detalhes técnicos... Muito complicado para comunicar para as áreas usuárias:</h3>
 					<ul>
-						<li class="fragment fade-up">Planejamento: Definindo a arquitetura</li>
-						<li class="fragment fade-up">Planejamento: Transformando os requerimentos de arquitetura em tecnologia e serviços</li>
+						<li class="fragment fade-up">Planejamento:</li>
+						<ul class="fragment fade-up">
+							<li>Definindo a arquitetura (design, integrações, SLAs, sizing...)</li>
+							<li>Transformando os requerimentos de arquitetura em tecnologia e serviços</li>
+						</ul>
 						<li class="fragment fade-up">Compras: Hardware, Software e Serviços</li>
 						<p class="fragment current-visible">...Ufa!!! Mas falta o deploy...</p>
 				</section>
@@ -127,6 +130,8 @@
 								<li><strong>Go live!!!</strong></li>
 						</ul>
 						<!-- <p class="fragment current-visible">...Ufa!!!...</p> -->
+				</section>
+				<section data-background="img/rework.gif" data-background="zoom" data-background-size="cover">
 				</section>
 				<section>
 					<h3>My Precious Infrastructure</h3>
@@ -161,19 +166,6 @@
 					</p>
 				</section>
 				<section>
-					<h2>Medo de reboot</h2>
-					<p>
-						<img src="img/fear_of_rebooting.png" alt="Medo de Reboot" style="float:center;width:700px;height:500px;">
-						<a href="http://everythingsysadmin.com/2012/03/fear-of-rebooting.html"><small>http://everythingsysadmin.com/2012/03/fear-of-rebooting.html</small></a>
-					</p>
-				</section>
-				<section>
-					<h2>Se tivesse todos os patches aplicados não teria sido infectado</h2>
-					<p>
-						<img src="img/que_puxa.jpg" alt="Que Puxa" style="float:center;width:600px;height:400px;">
-					</p>
-				</section>
-				<section>
 					<h2>Solução... ir para a nuvem? Que nuvem?</h2>
 					<p>
 						<img src="img/que-nuvem.jpg" alt="Minha Nuvem" style="width:500px;height:500px;">
@@ -198,17 +190,19 @@
 						É simples ir para nuvem? É só subir?
 					</p>
 				</section>
+				<section data-background="img/seus-problemas-acabaram.png" data-background-size="contain">
+				</section>
+				<section data-background="img/seus-problemas-acabaram_dark.png" data-background-transition="fade" data-background-size="contain">
+					<h2>Seus problemas acabaram!(???)</h2>
+				</section>
 				<section>
-					<h3>Pets vs Cattle...</h3>
-					<img src="img/servers_pets_or_cattle.jpg" alt="Pets_Cattle" style="width:800px;height:500px;">
+					<h2>Se tivesse todos os patches aplicados não teria sido infectado</h2>
 					<p>
-						<small>
-							Imagem: <a href:"http://www.theregister.co.uk/2013/03/18/servers_pets_or_cattle_cern/"> The Register - Are your servers PETS or CATTLE?</a>
-						</small>
+						<img src="img/que_puxa.jpg" alt="Que Puxa" style="float:center;width:600px;height:400px;">
 					</p>
 				</section>
 				<section>
-					<h3>Então...</h3>
+					<h3>Então, o que muda?</h3>
 					<!-- <img src="img/hotel.png" alt="Perimeter" style="float:right;width:230px;height:150px;"> -->
 					<p>
 						<ul>
@@ -236,6 +230,22 @@
 										<li>Imagem de SO</li>
 									</small>
 								</ul>
+					</p>
+				</section>
+				<section>
+					<h3>Pets vs Cattle...</h3>
+					<img src="img/servers_pets_or_cattle.jpg" alt="Pets_Cattle" style="width:800px;height:500px;">
+					<p>
+						<small>
+							Imagem: <a href:"http://www.theregister.co.uk/2013/03/18/servers_pets_or_cattle_cern/"> The Register - Are your servers PETS or CATTLE?</a>
+						</small>
+					</p>
+				</section>
+				<section>
+					<h2>Medo de reboot</h2>
+					<p>
+						<img src="img/fear_of_rebooting.png" alt="Medo de Reboot" style="float:center;width:700px;height:500px;">
+						<a href="http://everythingsysadmin.com/2012/03/fear-of-rebooting.html"><small>http://everythingsysadmin.com/2012/03/fear-of-rebooting.html</small></a>
 					</p>
 				</section>
 				<section>
@@ -280,17 +290,18 @@
 						<h2 class="fragment fade-up">SIM!!!</h2>
 							<ul class="fragment fade-up">
 									<li class="fragment fade-up">por hora/min</li>
-									<li class="fragment fade-up">Pay as you go</li>
-									<li class="fragment fade-up">Reservas</li>
-									<li class="fragment fade-up">Leilão</li>
+									<li class="fragment fade-up">pay as you go</li>
+									<li class="fragment fade-up">reserva</li>
+									<li class="fragment fade-up">leilão</li>
 							</ul>
 					</p>
 				</section>
-				<section>
+				<section data-background="img/crowd.jpg" data-background-transition="zoom" data-background-size="cover">
+					<strong>
 					<h3>Respondendo à demanda...</h3>
 					<p>
 						<ul>
-							<li>Autoscaling - Metric Load Alarms:
+							<li>Autoscaling - Metric Load Alarms:</li>
 								<ul>
 									<li>CPU</li>
 									<li>Network</li>
@@ -298,8 +309,10 @@
 									<li>Queue</li>
 									<li>Custom metric</li>
 								</ul>
+						</ul>
+					</strong>
 				</section>
-				<section data-background="img/resiliency.jpg" data-background-transition="zoom">
+				<section data-background="img/resiliency.jpg" data-background-transition="zoom" data-background-size="contain">
 				</section>
 				<section >
 					<h3>Selfhealing - Detectando falhas e corrigindo</h3>
@@ -307,14 +320,14 @@
 						<li>Service Port</li>
 						<li>Health Status URL</li>
 						<li>Application Cache Layers</li>
-						<li>Persisting data</li>
+						<li>Persistindo os dados:</li>
 							<ul>
 								<li>Snapshot</li>
 								<li>Object Storage</li>
 							</ul>
 					</ul>
 				</section>
-				<section data-background="img/gate_control.jpg" data-background-transition="zoom" data-backgorund-size="contain">
+				<section data-background="img/gate_control.jpg" data-background-transition="zoom" data-background-size="contain">
 					<h2>Inviabilidade de Concentrar o Tráfego em um Portão</h2>
 					<p>
 						<a href:"http://www.dailymail.co.uk/news/article-3442101/Mesmerising-drone-footage-shows-hundreds-sheep-moving-like-starlings-herded-fields.html">Mail OnLine</a>
@@ -350,24 +363,29 @@
 								<ul>
 									<small>
 										<li>Versão de Softawre</li>
-										<li>Tunnings de SO: sysctl, ulimit, selinux, permissões..</li>
+										<li>Tunnings de SO: sysctl, ulimit, selinux, permissões (arquivos e diretórios)..</li>
 									</small>
 								</ul>
 							<li>Garantem a consistência de configuração em um ambiente distribuído</li>
 							<li>Criam abstrações para acionamento do IaaS e do SO</li>
 							<li>Dependendo de como você usar, adeus SSH!!</li>
-							<li>Evite automatizar problemas!!!</li>
+							<li><strong>Evite automatizar problemas!!!</strong></li>
 					</p>
 				</section>
 				<section data-background="img/get-over-here.jpg" data-background-transition="fade" data-backgorund-size="contain">
 						<h3 class="fragment fade-up">Trazendo para o estado desejado</h3>
 							<p>
 								<ul class="fragment fade-up">
-									<li><b><font color="orange">Puppet:</font></b><i> "If it finds any resources that are not in their <strong><font color="darkgreen">desired state</font></strong>, it makes any changes necessary to correct them."</i> <a href="https://docs.puppet.com/puppet/latest/reference/architecture.html"><br><small>https://docs.puppet.com/puppet/latest/reference/architecture.html</small></a></li>
-									<li><b><font color="orange">Ansible:</font></b><i> "Ansible features an state-driven resource model that describes the <strong><font color="darkgreen">desired state</font></strong> of computer systems and services, not the paths to get them to this state."</i><br><small><a href="https://www.ansible.com/configuration-management">https://www.ansible.com/configuration-management</small></a></li>
-									<li><b><font color="orange">Chef:</font></b><i> "...uses a “convergent” model of configuration. As changes propagate through the nodes, the network as a whole converges to the <strong><font color="darkgreen">desired configuration state</font></strong>."</i><br><small><a href="https://www.chef.io/solutions/infrastructure-automation/">https://www.chef.io/solutions/infrastructure-automation/</small></a></li>
+									<li><b><font color="orange">Puppet:</font></b><i> "If it finds any resources that are not in their <strong><font color="yellow">desired state</font></strong>, it makes any changes necessary to correct them."</i> <a href="https://docs.puppet.com/puppet/latest/reference/architecture.html"><br><small>https://docs.puppet.com/puppet/latest/reference/architecture.html</small></a></li>
+									<li><b><font color="orange">Ansible:</font></b><i> "Ansible features an state-driven resource model that describes the <strong><font color="yellow">desired state</font></strong> of computer systems and services, not the paths to get them to this state."</i><br><small><a href="https://www.ansible.com/configuration-management">https://www.ansible.com/configuration-management</small></a></li>
+									<li><b><font color="orange">Chef:</font></b><i> "...uses a “convergent” model of configuration. As changes propagate through the nodes, the network as a whole converges to the <strong><font color="yellow">desired configuration state</font></strong>."</i><br><small><a href="https://www.chef.io/solutions/infrastructure-automation/">https://www.chef.io/solutions/infrastructure-automation/</small></a></li>
 								</ul>
 							</p>
+				</section>
+				<section>
+					<h3>Infrastructure as Code</h3>
+				</section>
+				<section data-background="img/jackie.jpg" data-background-transition="zoom" data-background-size="cover">
 				</section>
 				<section>
 					<h3>Infrastructure as Code</h3>
@@ -449,7 +467,6 @@
     "AWSRegionArch2AMI" : {
       "us-east-1"        : {"PV64" : "ami-2a69aa47", "HVM64" : "ami-8fcee4e5", "HVMG2" : "ami-2e5e9c43"}
     }
-
   },
 
   "Resources" : {
@@ -467,11 +484,7 @@
                "yum install docker -y\n",
                "chkconfig docker on\n",
                "service docker start\n",
-               "docker login",
-               " -e ", { "Ref" : "DockerEmail" },
-               " -u ", { "Ref" : "DockerUser" },
-               " -p ", { "Ref" : "DockerPassword" }, "\n",
-               "docker run --name=dois -h dois -p 80:8000 -d arineto/dois\n"
+               "docker run --name=tmbsides -h dois -p 80:8000 -d arineto/tmbsides\n"
                ]]}}
       }
     },
@@ -480,7 +493,7 @@
       "Type" : "AWS::EC2::SecurityGroup",
       "Properties" : {
         "VpcId" : { "Ref" : "VPC" },
-        "GroupDescription" : "DOIS - Enable SSH and HTTP",
+        "GroupDescription" : "BSides - Enable SSH and HTTP",
         "SecurityGroupIngress" : [ {
           "IpProtocol" : "tcp",
           "FromPort" : "22",
@@ -491,7 +504,7 @@
           "IpProtocol" : "tcp",
           "FromPort" : "80",
           "ToPort" : "80",
-          "CidrIp" : { "Ref" : "SSHLocation"}
+          "CidrIp" : { "Ref" : "WEBLocation"}
         } ]
       }
     }
@@ -532,36 +545,25 @@ machine:
     - docker
   environment:
     AWS_DEFAULT_REGION: us-east-1
-  pre:
-    - sudo pip install setuptools
-    - sudo pip install ansible==2.1.1.0 boto==2.42.0 awscli==1.10.22
-    - ansible --version
-    - pip freeze
 
 dependencies:
   override:
     - docker info
-    - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
-    - docker build -t $CIRCLE_PROJECT_REPONAME .
+    - docker build -t $DOCKER_USER/$CIRCLE_PROJECT_REPONAME .
 
 test:
   override:
-    - docker run -d -p 80:8000 $CIRCLE_PROJECT_USERNAME; sleep 10
+    - docker run -d -p 80:8000 $DOCKER_USER/$CIRCLE_PROJECT_REPONAME; sleep 10
     - curl --retry 10 --retry-delay 5 -v http://localhost
 
 deployment:
   production:
     branch: master
     commands:
-      - docker tag dois $CIRCLE_PROJECT_USERNAME/tmbsides
-      - docker push $CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME:$CIRCLE_TAG
-      - docker push $CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME
+      - docker info
+      - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
+      - docker push $DOCKER_USER/$CIRCLE_PROJECT_REPONAME
 			- export ENV=prd ; cd ~/$CIRCLE_PROJECT_REPONAME/ansible/app-env ; ansible-playbook playbook.yml -vvvv
-  staging:
-    branch: staging
-    commands:
-      - docker tag dois $CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME:$CIRCLE_BRANCH
-      - docker push $CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME:$CIRCLE_BRANCH
   feature:
     branch: /feature-.*/
     commands:
@@ -608,17 +610,22 @@ deployment:
 				<section data-background="img/big-data.png" data-transition="zoom" data-background-size="cover">
 					<h3>Se tudo é dinâmico e distribuído... é importante</h3>
 					<ul>
+						<li>Monitorar a infraestrutura</li>
+						<li>Monitorar a aplicação</li>
+						<li>Monitorar eventos de segurança</li>
 						<li>Gerar e persistir eventos</li>
-						<li>Maneiras de apresentar esta informação para:</li>
+						<li>Ser data driven:</li>
 							<ul>
-								<li>Identificar origem: IaaS, Infraestrutura, Aplicação, Segurança?</li>
+								<li>Cruzar informações de diferentes contextos</li>
 								<li>Gerar indicadores</li>
+								<li>Fazer previsões(!!!)</li>
 							</ul>
 					</ul>
-					<!-- <img src="img/elk.png" alt="ELK" style="width:400px;height:150px;">
-					<img src="img/graylog.jpg" alt="Graylog" style="width:400px;height:150px;"> -->
 				</section>
 				<section data-background="img/dashboard.png" data-transition="zoom" data-background-size="contain">
+				</section>
+				<section>
+					<h1>E a segurança?</h1>
 				</section>
 				<section data-background="img/a-vlan.jpg" data-transition="zoom" data-background-size="cover">
 					<h1>Segmentação from hell</h1>
@@ -627,48 +634,24 @@ deployment:
 					<h3>Isso era difícil de fazer e agora é bem mais fácil...</h3>
 					<img src="img/it_is_possible.jpg" alt="Concerns Cloud" style="width:800px;height:500px;">
 				</section>
-
-				<!-- <section>
-					<h3>Segmentação...</h3>
-					<p>
-						É possível fazer leverage de várias funcionalidades de segmentação:
-						<ul>
-							<li>Policies, Roles</li>
-							<li>Filtragem de Tráfego entre Subnets</li>
-							<li>Controle granular do esquema de roteamento</li>
-							<li>Security Groups</li>
-							<ul>
-								<small>
-									<li>SG_A de serviço: permite porta 443/TCP para 0.0.0.0/0</li>
-									<li>SG_B Web Tier: permite acesso na porta 80/TCP somente do SG_A</li>
-									<li>SB_C App Tier: permite acesso na porta 8080/TCP somente do SG_B</li>
-									<li>SB_D DB  Tier: permite acesso na porta 3306/TCP somente do SG_C</li>
-								</small>
-							</ul>
-							<p>
-								E também você sempre esta a um passo de publicar algo interno para o mundo... Atenção!
-							</p>
-						</p>
-				</section> -->
 				<section data-background="img/sg_segmentation.png" data-background-size="cover">
 				</section>
 				<section data-background="img/sg_segmentation-dark.png" data-background-size="cover">
 					<h1 class="fragment fade-up"><font color="white">Segmentação from heaven</font></h1>
 				</section>
-				<section>
-					<h1>E a segurança?</h1>
+				<section data-background="img/devops-fry.jpg" data-background-transition="zoom" data-background-size="contain">
 				</section>
 				<section>
 					<h3>Pense antes e integre no ciclo de provisionamento</h3>
 					<ul>
-						<li>Audite suas receitas de provisionamento</li>
-						<li>Controle a origem do software</li>
-						<li>Defina e aplique segurança como parte da infraestrutura</li>
-						<li>Controle suas credenciais de provisionamento e credenciais de acesso às instâncias</li>
-						<li>Restringir o acesso usando Security Groups, evite usar SGs genéricos</li>
-						<li>Audite os Security Groups/Policies/Roles/Grupos/Usuários</li>
-						<li>Use MFA</li>
-						<li>FW/IPS/IDS de host como uma camada extra de segurança</li>
+						<li><strong><font color="darkorange">Audite</font></strong> suas receitas de provisionamento</li>
+						<li><strong><font color="darkorange">Controle</font></strong> a origem do software (yum/apt/docker)</li>
+						<li>Defina e <strong><font color="darkorange">aplique</font></strong> segurança como parte da infraestrutura</li>
+						<li><strong><font color="darkorange">Controle</font></strong> suas credenciais de provisionamento e credenciais de <strong>acesso</strong> às instâncias</li>
+						<li><strong><font color="darkorange">Restrinja</font></strong> o acesso usando Security Groups, evite usar SGs genéricos</li>
+						<li><strong><font color="darkorange">Audite</font></strong> os Security Groups/Policies/Roles/Grupos/Usuários</li>
+						<li>Use <strong><font color="darkorange">MFA/SSO</font></strong></li>
+						<li>FW/IPS/IDS de host como uma <strong><font color="darkorange">camada extra</font></strong> de segurança</li>
 					</ul>
 				</section>
 				<section data-background="img/devil-cloud-screaming.jpg" data-background-transition="zoom" data-background-size="cover">
